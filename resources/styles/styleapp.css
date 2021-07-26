@@ -1,0 +1,588 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'DotGothic16', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    transition: 0.5s;
+    background-color: steelblue;
+    background-image: url(../images/blob.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: -25rem;
+}
+
+.cont {
+    position: relative;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    width: 1280px;
+    height: 680px;   
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.users {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 25%;
+    height: 100%;
+    overflow-x: hidden;
+    transition: 0.5s;
+    overflow-y: scroll;
+}
+
+.userinfo {
+    background-color: rgb(255, 117, 117);
+    width: 75%;
+    height: 100%;
+    background: rgb(255, 117, 117, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(136, 136, 136, 0.37);
+    backdrop-filter: blur( 8px );
+    -webkit-backdrop-filter: blur( 8px );
+}
+
+.user {
+    background: rgba(0, 0, 0, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur( 8px );
+    -webkit-backdrop-filter: blur( 8px );
+    margin-bottom: 5px;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 5rem;
+    border-radius: 50px 0 50px 0;
+    overflow: hidden;
+}
+
+.contimg {
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    overflow: hidden;
+    border-bottom-style: solid;
+    border-bottom-color: rgba(0, 0, 0, 0.8);
+}
+
+.contimg:hover {
+    transition: 0.2s;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.username {
+    margin-left: 1rem;
+}
+
+.contimg img{
+    width: 100%;
+}
+
+.city {
+    background-image: url(../images/loc.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50px;
+    position: relative;
+    top: -1.5rem;
+    left: 5%;
+    width: 25px;
+    height: 25px;
+    z-index: 9;
+    transition: 1s;
+    overflow: hidden;
+    border-bottom-style: groove;
+
+}
+
+.city:hover {
+    transition: 0.2s;
+    transform: scale(1.1);
+}
+
+.namecity {
+    text-align: center;
+    border-radius: 50px 0px 50px 0px;
+    border-bottom-style: groove;
+    background: rgb(255, 255, 255);
+    box-shadow: 0 8px 32px 0 rgba(192, 192, 192, 0.37);
+    backdrop-filter: blur( 8px );
+    -webkit-backdrop-filter: blur( 8px );
+    position: relative;
+    top: 3%;
+    left: 100%;
+    width: 800%;
+    transition: 1s;
+    color: black;
+}
+
+.namecity.active{
+    transform: translateX(5px);
+    text-align: center;
+    border-radius: 50px 0px 50px 0px;
+    background: rgba(0, 0, 0, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur( 8px );
+    -webkit-backdrop-filter: blur( 8px );
+    position: relative;
+    top: 3%;
+    left: 100%;
+    width: 800%;
+    transition: 0.5s;
+    color: white;
+}
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: rgba(241, 241, 241, 0.1); 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(255, 117, 117, 0.5); 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+      background: rgba(255, 117, 117, 1); 
+  }
+
+.navprofile {
+    padding: 1%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    position: relative;
+    left: 90%;
+    height: 4rem;
+    width: 20rem;
+    overflow: hidden;
+    border-radius: 0px 25px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+    transition: 0.5s;
+    z-index: 99;   
+}
+
+.navprofile img{
+    width: 50%;
+    border: rgb(0, 0, 0);
+    border-style: ridge;
+    border-radius: 50px;
+    box-shadow: 0 5px 10px 0 rgb(54, 54, 54);
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    background-color: black;  
+}
+
+
+.navprofile:hover {
+    left: 70%;
+}
+
+.navprofile img:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+
+.main {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.myPerfil{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.myPerfilName {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 90%;
+    height: 50%;
+    letter-spacing: .5rem;
+    font-size: larger;
+    border-radius: 0px 0px 50px 50px;
+    background: rgba(70,130,180, 0.5);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur( 8px );
+    -webkit-backdrop-filter: blur( 8px );
+
+}
+
+.myPerfilImg {
+    margin-top: 1.5rem;
+    width: 150px;
+    height: 150px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 100px;
+    overflow: hidden;
+    transition: 0.5s;
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur( 8px );
+    -webkit-backdrop-filter: blur( 8px );
+}
+
+.myPerfilImg:hover {
+    transform: scale(1.1);
+}
+
+
+
+.content_formPerfil {
+    display: flex;
+    width: 80%;
+    height: 50%;
+}
+
+.infoPerfil{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    height: 100%;
+    margin-right: 1rem;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.form_addPerfil {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    width: 30%;
+    height: 100%;    
+    border-radius: 0px 0px 50px 50px;
+    background: rgba(70, 130, 180, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur( 8px );
+    -webkit-backdrop-filter: blur( 8px );
+}
+
+.form_addPerfil img{
+    position: relative;
+    left: 30%;
+
+    margin-bottom: 2rem;
+    border-radius: 50px;
+    background-color: rgb(0, 0, 0);
+    width: 70px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur( 8px );
+    -webkit-backdrop-filter: blur( 8px );
+}
+
+.form_addPerfil form select{
+    position: relative;
+    left: 10%;
+
+    display: block;
+    margin-bottom: 3rem;
+    width: 80%;
+}
+
+.form_addPerfil form input[type=text] {
+    position: relative;
+    left: 10%;
+
+    margin-bottom: 1rem;
+    text-align: center;
+    width: 80%;
+}
+
+.form_addPerfil form input[type=submit] {
+    position: relative;
+    left: 25%;
+    text-align: center;
+    margin-top: 1rem;
+    width: 100px;
+    height: 50px;
+    border-radius: 25px 0 25px 0;
+
+    border-style: hidden;
+    color: white;
+    letter-spacing: 5px;
+    border-radius: 25px 0px 25px 0px;
+    background: rgba(255, 238, 238, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur( 8px );
+    -webkit-backdrop-filter: blur( 8px );
+    cursor: pointer;
+}
+
+.form_addPerfil form input[type=submit]:hover {
+    border-radius: 25px 0px 25px 0px;
+    background: rgb(255, 117, 117);
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur( 8px );
+    -webkit-backdrop-filter: blur( 8px );
+    transition: 0.5s;
+    transform: scale(1.1);
+    letter-spacing: 6px;
+}
+
+.gamesUser {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100px;
+    margin: 1rem 0rem 1rem 0rem;
+    border-radius: 25px 0 25px 0;
+    background: rgba(70, 130, 180, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur( 8px );
+    -webkit-backdrop-filter: blur( 8px );
+}
+
+.gamesUser img{
+    background-color: steelblue;
+    border-radius: 50px;
+    width: 50px;
+}
+
+.gamesUser p{
+    margin: 0.2rem;
+}
+
+.myPerfilImg input[type=file]{
+    display: none;
+}
+
+.btnup {
+    position: absolute;
+    display: none;
+    border-radius: 15px 0 15px 0;
+    height: 2rem;
+    text-align: center;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    right: 0;
+    left: 46%;
+    color: white;
+    background: rgba(70, 130, 180, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur( 8px );
+    -webkit-backdrop-filter: blur( 8px );
+    border-bottom-color: white;
+}
+
+.btnup.active {
+    transition: 0.5s;
+    cursor: pointer;
+    display: block;
+}
+
+.btnup.active:hover {
+    color: rgb(0, 0, 0);
+    transition: 0.5s;
+    background: rgba(255, 117, 117, 1);
+}
+
+
+.myPerfilImg img{
+    position: relative;
+    width: 100%;
+    cursor: pointer;
+    transition: 0.5s;
+    top: 0.2rem;
+}
+
+.myPerfilImg img:hover{
+    transition-delay: 0.2s;
+    transform: scale(1.1);
+}
+
+
+.modeLocation{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(70, 130, 180, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur( 8px );
+    -webkit-backdrop-filter: blur( 8px );
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.modeLocation img{
+    margin-top: -10rem;
+    margin-bottom: 5rem;
+    width: 200px;
+}
+
+.modeLocation input[type=submit]{
+    border-style: hidden;
+    color: white;
+    letter-spacing: 5px;
+    width: 200px;
+    height: 50px;
+    margin: 1rem;
+    border-radius: 25px 0px 25px 0px;
+    background: rgba(255, 238, 238, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur( 8px );
+    -webkit-backdrop-filter: blur( 8px );
+    cursor: pointer;
+}
+
+.modeLocation.desact {
+    display: none;
+}
+
+.modeLocation input[type=submit]:hover{
+    
+    border-radius: 25px 0px 25px 0px;
+
+    background: rgb(255, 117, 117);
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur( 8px );
+    -webkit-backdrop-filter: blur( 8px );
+    transition: 0.5s;
+    transform: scale(1.1);
+    letter-spacing: 8px;
+}
+
+
+
+.delGame {
+    position: absolute;
+    top: -13%;
+    left: 93%;
+    background: transparent;
+}
+
+.delGame form input[type=submit] {
+    background-image: url(../images/delete.svg);
+    background-color: transparent;
+    border-radius: 50px;
+    border-style: hidden;
+    width: 25px;
+    height: 25px;
+}
+
+.delGame form input[type=submit]:hover {
+    background-image: url(../images/deleteh.svg);
+    transition: 0.5s;
+    transform: scale(1.2);
+}
+
+.contInfUserGames {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    overflow-y: scroll;
+}
+
+.contInfUserProfile {
+    display: flex;
+    height: 50%;
+    width: 100%;
+}
+
+
+.myPerfilNameU {
+    display: flex;
+    position: relative;
+    top: -10%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 50%;
+    letter-spacing: .5rem;
+    font-size: larger;
+    border-radius: 0px 0px 50px 50px;
+    background: rgba(70,130,180, 0.5);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur( 8px );
+    -webkit-backdrop-filter: blur( 8px );
+
+}
+
+.myPerfilImgU {
+    margin-top: 1.5rem;
+    width: 150px;
+    height: 150px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 100px;
+    overflow: hidden;
+    transition: 0.5s;
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur( 8px );
+    -webkit-backdrop-filter: blur( 8px );
+}
+
+.myPerfilImgU:hover {
+    transform: scale(1.1);
+}
+
+.myPerfilImgU img{
+    position: relative;
+    width: 100%;
+    transition: 0.5s;
+    top: 0.2rem;
+}
+
+.myPerfilImgU img:hover{
+    transition-delay: 0.5s;
+    transform: scale(1.2);
+}
+
+.gamesUserContent {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+}
