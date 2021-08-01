@@ -299,46 +299,68 @@ body.active {
 
 
 
-@media (max-width: 430px) {
+@media (max-width: 600px) {
+   
     body {
+        height: 100%;
         width: 100%;
-
+        min-height: 100vh;
+        border-radius: 0;
     }
-    .blueBg {
+
+    .container {
+        margin: 0;
+        padding: 0;
         position: relative;
-    }
-    .container{
         width: 100%;
+        height: 650px;
     }
 
-    .blueBg .box {
+    .formBx {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .formBx form input {
+        width: 100%;
+        margin-top: 4%;
+        margin-bottom: 4%;
+        margin-left: 0;
+        border-radius: 0;
+    }
+
+
+    .formBx {
+        position: relative;
+        height: 100%;
+        border-radius: 0;
+    }
+
+
+    .blueBg {
+        flex-direction: column;
+        background-color: tomato;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        border-radius: 0;
+    }
+
+    .box.signin,
+    .box.signup
+    {
         display: none;
     }
-    .formBx {
-    width: 100%;
-    height: 180%;
-    position: relative;
-    border-radius: 15% 0 15% 0;
-    top: 0;
-    left: 0;
-    }
-    .formBx .form {
-        position: absolute;
-        width: 100%;
-        padding: 5rem;
-        transition: 0.5s;
-    }
 
-    .formBx .signinForm {
-        left: -20%;;
-        top: 20%;
-
-    }
-
-    .formBx .signupForm {
-        left: -20%;
-        top: 60%;
-
+    .form.signupForm,
+    .form.signinForm 
+    {
+        position: relative;
+        left: 0;
+        margin: 0;
+        padding: 0;
     }
 
 }

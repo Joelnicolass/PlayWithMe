@@ -586,3 +586,185 @@ body {
     justify-content: space-around;
     align-content: center;
 }
+
+
+
+
+@media (max-width: 1200px) { 
+
+
+
+    .cont {
+        width: 100vw;
+        height: 100vh;
+        border-radius: 0;
+
+        box-shadow: none;
+        -webkit-backdrop-filter: none;
+        backdrop-filter: none;
+    }
+
+    .users {
+        /*display: none;*/
+        top: 0;
+        left: 0;
+        width: 50%;
+    }
+
+    .user {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        border-radius: 0;
+        height: 100px;
+        
+        -webkit-backdrop-filter: none;
+        backdrop-filter: none;
+    }
+
+    .contimg {
+        width: 50px;
+        height: 50px;
+        border-radius: 50px;
+        overflow: hidden;
+    }
+
+    .username {
+        margin: 0;
+        padding: 0;
+    }
+
+    .city {
+        display: none;
+    }
+
+    .users.active {
+        display: block;
+    }
+
+    .userinfo {
+        width: 100%;
+    }
+
+    .navprofile {
+        width: 100%;
+        border-radius: 0px 0px 25px 25px;
+        left: 0;
+        top: 0;
+    }
+
+    .navprofile:hover {
+        width: 100%;
+        transform: none;
+        top: 0;
+        left: 0;
+    }
+
+    .navcont img {
+        width: 3rem;
+    }
+
+
+    .myPerfilNameU {
+        top: 5%;
+        height: 20%;
+        
+        background-color: transparent;
+        box-shadow: none;
+        -webkit-backdrop-filter: none;
+        backdrop-filter: none;
+    }
+
+    .gamesUserContent {
+        flex-wrap: nowrap;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .myPerfilName {
+        position: relative;
+        width: 100%;
+        height: 30%;
+        top: -5%;
+
+        background: transparent;
+        box-shadow: none;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+    }
+
+    .gamesUser {
+        width: 100%;
+    }
+
+    .content_formPerfil {
+        display: flex;
+        width: 80%;
+        height: 50%;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .form_addPerfil {
+        width: 100%;
+        border-radius: 50px 0px 50px 0;
+    }
+
+    .infoPerfil {
+        width: 100%;
+        height: 500px;
+    }
+
+    .content_formPerfil {
+        position: relative;
+        bottom: -5%;
+        width: 90%;
+        align-items: unset;
+    }
+
+    .form_addPerfil form img {
+        display: none;
+    }
+
+    .form_addPerfil form select,
+    .form_addPerfil form input[type="text"] { 
+        margin-bottom: 0.5rem;
+        width: 100%;
+        left: 0;
+        border-radius: 0;
+    }
+
+    .form_addPerfil form input[type="submit"] {
+        margin-bottom: 0.5rem;
+        width: 80%;
+        left: 10%;
+        padding: 0;
+    }
+
+    .myPerfilImg {
+       width: 80px;
+       height: 80px;
+    }
+
+    .infoPerfil {
+        position: relative;
+        top: -20%;
+    }
+
+    .delGame {
+        left: 90%;
+    }
+
+    .myPerfilImgU {
+        height: 80px;
+        width: 80px;
+    }
+
+    .btnup {
+        bottom: -3%;
+        left: 38%;
+    }
+
+}

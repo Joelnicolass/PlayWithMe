@@ -102,6 +102,9 @@ class Database {
 
     }
 
+    public function hola ($a) {
+        echo $a;
+    }
 
 }
 
