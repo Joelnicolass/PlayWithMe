@@ -67,9 +67,8 @@ $gameId = $user->gameId($idUserSelected);
     $gameName = $games->gameInfo($idg);
     $idArr = $i;
 
-    $gamesAll = $games->allGamesInfo();
 
-    $imagen = $gamesAll[$i]['image_game'];
+    $imagen = $gameName[0]['image_game'];
 
     ?>
 
