@@ -11,6 +11,15 @@ $prov = $_SESSION['prov'];
 $mode = $_SESSION['modeLocation'];
 
 
+if ($_SESSION['user'] == 'ADMINISTRADOR') {
+
+    echo "<p>----ADMIN----</p>";
+
+} else {
+
+
+
+
 if ($mode == 'Provincia') {
     
 
@@ -26,12 +35,15 @@ if ($mode == 'Provincia') {
 
 
         <?php for ($i = 0; $i<count($usersProv); $i++) {
-            
+                    
             $imagen = $usersProv[$i]['img_perfil'];
 
         ?>
 
 
+            <?php if ($usersProv[$i]['user'] == 'ADMINISTRADOR') {
+            } else {
+        ?>
             
         <div class="user">
 
@@ -58,6 +70,7 @@ if ($mode == 'Provincia') {
 
 <?php } 
 
+    }
 
 } 
 
@@ -80,7 +93,9 @@ if ($mode == 'Ciudad') {
 
         ?>
 
-
+<?php if ($usersProv[$i]['user'] == 'ADMINISTRADOR') {
+            } else {
+        ?>
             
         <div class="user">
 
@@ -105,10 +120,11 @@ if ($mode == 'Ciudad') {
 
 
 
-<?php } 
-
+<?php       }    
+   
+        }
     
+    }
+
 }
-
-
 ?>

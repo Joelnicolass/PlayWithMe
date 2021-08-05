@@ -20,7 +20,7 @@
 </select>
 
 <select id="select2">
-
+    <option value=""></option>
 </select>
 
 </form> 
@@ -33,45 +33,28 @@
 const select = document.getElementById('select');
 const select2 = document.getElementById('select2');
 
-const fetchSelect = async () => {
-            
-    try {
-    
-        const res = await fetch('optionSelected.php?id='+event.target.value);
-    
-        const data = await res.json();
-    
-
-        let option = '<option value="">-</option>';
-
-        if (data.data.length > 0) {
-            for (let i = 0; i < data.data.length; i++) {
-
-            option += `<option value="${data.data[i].id}">${data.data[i].prod}</option>`;
-
-            select2.innerHTML = option;
-            }
-
-        }   
-            let state = "ok";
-            return state;
-    
-    } catch (error) {
-    
-                console.log('Fetch error: ', error);
-    
-            }
-    
-        }
-
 select.addEventListener('change', event => {
-        
-    console.log(fetchSelect());
+    fetch('optionSelected.php?id='+event.target.value)
+    .then(res => {
+        if (!res.ok) {
+            throw new Error('Error');
+        }
+        return res.json();
+    })
+        .then (datos => {
+            let option = '<option value="">-</option>';
 
-});
+            if (datos.data.length > 0) {
+                for (let i = 0; i < datos.data.length; i++) {
 
+                option += `<option value="${datos.data[i].id}">${datos.data[i].prod}</option>`;
+                select2.innerHTML = option;
+                //console.log(datos.data);
+                }
 
-
+            }
+        })
+    })
 
 </script>
 

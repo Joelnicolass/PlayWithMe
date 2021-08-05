@@ -66,9 +66,20 @@ $gameId = $user->gameId($idUserSelected);
     $idg = $gameId[$i];
     $gameName = $games->gameInfo($idg);
     $idArr = $i;
+
+    $gamesAll = $games->allGamesInfo();
+
+    $imagen = $gamesAll[$i]['image_game'];
+
     ?>
 
-    <img src="resources/images/logo.svg" alt="">
+    <?php if ($imagen == NULL) {
+                echo '<img src="resources/images/logo.svg"/>';
+            } else {
+                echo '<img src="data:image/jpeg;base64,'.base64_encode($imagen).'"/>';
+            }
+    ?>
+
 
 
     <?php 

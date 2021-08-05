@@ -587,6 +587,9 @@ body {
     align-content: center;
 }
 
+.main {
+    overflow-y: scroll;
+}
 
 
 

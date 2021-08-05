@@ -1,6 +1,6 @@
 <?php
 session_start();
-$ids = $_SESSION['id_usuario'];
+$idg = $_POST['idg'];
 
 //recibiendo archivo
 $archivoNombre = $_FILES['archivo']['name'];
@@ -19,10 +19,9 @@ include('connect.php');
 
 
 //envio de datos
-mysqli_query($datosdb, "UPDATE usuarios SET img_perfil='$archivoDB' WHERE id_usuario=$ids");
-
+mysqli_query($datosdb, "UPDATE juegos SET image_game='$archivoDB' WHERE id_juego=$idg");
 
 //feedback al usuario luego de enviar
-header('Location: ../app.php?userconfig');
+header('Location: ../app.php');
 
 ?>

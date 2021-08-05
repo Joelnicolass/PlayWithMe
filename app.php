@@ -88,6 +88,11 @@ if (isset($_SESSION['modeLocation'])) {
     }
 
 
+    if ($_SESSION['user'] == 'ADMINISTRADOR') { ?>
+        <?php include_once(PATHCOMPONENTS.'adminView_component.php');
+    }
+    ?>
+    <?php
     if (isset($_GET['userinfo'])) { ?>
 
 

@@ -30,6 +30,16 @@ class Games {
 }
 
 
+    //Agregar Nuevo juego
+
+    public function gameAdd ($name) {
+               
+        $response = $this->db->sendQy("INSERT INTO `juegos` VALUES (DEFAULT, '$name', NULL)");
+
+    return $response;
+}
+
+
 //-----------------------------------------------------------------------------------------------------
 
 }

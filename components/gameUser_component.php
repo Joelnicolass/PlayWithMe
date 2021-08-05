@@ -37,7 +37,23 @@ $gameId = $user->gameId($_SESSION['id_usuario']);
     </form>
     </div>
 
-    <img src="resources/images/logo.svg" alt="">
+    <?php
+    $idg = $gameId[$i];
+    $gameName = $games->gameInfo($idg);
+    $idArr = $i;
+
+    $gamesAll = $games->allGamesInfo();
+
+    $imagen = $gamesAll[$i]['image_game'];
+
+    ?>
+
+    <?php if ($imagen == NULL) {
+                echo '<img src="resources/images/logo.svg"/>';
+            } else {
+                echo '<img src="data:image/jpeg;base64,'.base64_encode($imagen).'"/>';
+            }
+    ?>
 
 
     <?php 

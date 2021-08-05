@@ -56,6 +56,11 @@ class User {
 
     public function newGameAndNick($iduser, $nick, $idgame) {
 
+        if ($nick == "") {
+            $response = 'error';
+            return $response;
+        } else {
+
         //traer los juegos (id) y actualizar lista
         $listGames = $this->db->sendQy("SELECT `juego_id` FROM `usuarios` WHERE id_usuario=$iduser");
         $listGames = $listGames[0]["juego_id"];
@@ -73,7 +78,7 @@ class User {
         $response = $this->db->sendQy("UPDATE usuarios SET nick='$listNickUser', juego_id='$listGames' WHERE id_usuario=$iduser");
         
         return $response;
-    
+        }
     }
 
 
